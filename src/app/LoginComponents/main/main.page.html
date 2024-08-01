@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Main</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (submit)="onSubmit()" [formGroup]="loginFormGroup" class="flex flex-col justify-center items-center h-full ">
+  <img src="../../assets/icon/ZstrongIcon.png" class="w-30 h-30">
+  <input formControlName="username" class="rounded-md border-1 border-gray-500 m-2" type="text" placeholder="Usuario">
+  <input formControlName="password" class="rounded-md border-1 border-gray-500 m-2" type="password" placeholder="Contraseña">
+  <button type="submit" class="m-2 mb-2 me-2 rounded-md bg-blue-500 px-5 py-2.5 text-sm font-medium text-white">Entrar</button>
+  <button routerLink="/register" type="button" class="m-2 mb-2 me-2 rounded-md bg-blue-500 px-5 py-2.5 text-sm font-medium text-white">Registrase </button>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <div class="flex flex-row justify-center items-center">
+    <p class="text-black">© 2024 Zstrong</p>
+  </div>
+</ion-footer>

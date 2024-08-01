@@ -1,13 +1,18 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+ 
   {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+    path: 'main', loadComponent: () => import('./LoginComponents/main/main.page').then(m => m.MainPage)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    path: 'register',
+    loadComponent: () => import('./LoginComponents/register/register.page').then( m => m.RegisterPage)
   },
+  {
+    path: 'create-mesociclo',
+    loadComponent: () => import('./ExerciseComponents/mesociclo/create-mesociclo/create-mesociclo.page').then( m => m.CreateMesocicloPage)
+  },
+ 
+
 ];

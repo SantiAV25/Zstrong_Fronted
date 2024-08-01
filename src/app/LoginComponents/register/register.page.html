@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form (submit)="onSubmit()" [formGroup]="registerFormGroup" class="flex flex-col justify-center items-center h-full">
+
+    <img src="../../assets/icon/ZstrongIcon.png" class="w-30 h-30">
+    <input formControlName="username" class="rounded-md border-1 border-gray-500 m-2" type="text" placeholder="Usuario">
+    <input formControlName="password" class="rounded-md border-1 border-gray-500 m-2" type="password" placeholder="Contraseña">
+    <input formControlName="email" class="rounded-md border-1 border-gray-500 m-2" type="email" placeholder="email">
+    <button type="submit" class="m-2 mb-2 me-2 rounded-md bg-blue-500 px-5 py-2.5 text-sm font-medium text-white">Registrase </button>
+
+</form>
+  
+</ion-content>
